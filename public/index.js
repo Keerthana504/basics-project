@@ -1,14 +1,12 @@
 //example for this scope
 var length = 10;
 function fn() {
-  console.log(this.length); // 10 (printed from the global scope as this points to global)
-  // 2 (prints the length of the arguments as this points to arguments)
+  console.log(this.length); // 10 (printed from the global scope as this points to global) // 2 (prints the length of the arguments as this points to arguments)
 }
 var obj = {
   length: 5,
   method: function (fn) {
     fn();
-    //console.log( );
     arguments[0]();
   },
 };
@@ -33,6 +31,20 @@ const name2 = {
 };
 
 name.method.call(name2);
+
+const city = function (state, city) {
+  console.log(`My name is ${this.firstName} ${this.lastname}`);
+  console.log(`I live in ${state} ${city}`); //using Template Literals from the new ES6 features
+};
+
+city.call(name, "Telangana", "Hyderabad");
+city.call(name2, "Telangana", "Shadnagar");
+
+city.apply(name, ["Telangana", "Hyderabad"]);
+city.apply(name2, ["Telangana", "Shadnagar"]);
+
+const name3 = city.bind(name, "Canada", "Windsor");
+name3();
 //example for apply
 
 //example for bind

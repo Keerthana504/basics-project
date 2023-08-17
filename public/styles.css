@@ -4,6 +4,15 @@ h1 {
 
 body {
   font-family: "Tangerine", serif;
-  font-size: 26px;
+  font-size: 20px;
   text-shadow: 4px 4px 4px #aaa;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-flex;
+  margin: 0px 20px !important;
 }
