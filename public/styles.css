@@ -1,18 +1,108 @@
-h1 {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+.heading {
+  color: white;
+  text-align: left;
+  /* margin: 10px 20px !important; */
+}
+
+header {
+  background-color: #321;
+  color: white;
+  padding: 10px 0;
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Distribute items evenly */
+  align-items: center; /* Center vertically */
 }
 
 body {
-  font-family: "Tangerine", serif;
-  font-size: 20px;
-  text-shadow: 4px 4px 4px #aaa;
+  margin: 0rem;
+  padding: 0rem;
+  /* background: #; */
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: lightslategrey;
+  /* text-decoration-color: ; */
 }
 
-ul {
+main {
+  min-height: calc(80vh - 100px);
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  padding: 0px 40px;
+}
+
+nav ul {
   list-style-type: none;
+  justify-content: left;
+  background-color: salmon;
+  align-items: center;
+  /* padding: 10px; */
+  @media (min-width: 600px) {
+    padding: 10px;
+  }
 }
 
-li {
+nav.flexbox {
+  display: flex;
+  padding: 0px 25px;
+  justify-content: space-between;
+  align-items: center;
+  @media (min-width: 600px) {
+    justify-content: space-between;
+  }
+}
+
+nav li {
   display: inline-flex;
-  margin: 0px 20px !important;
+  margin: 0.5rem 2rem;
+}
+
+nav a {
+  /* color: #007bff; */
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+  /* font-weight: bold; */
+}
+
+/* nav a::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  right: 0px;
+  bottom: -3px;
+  left: 0px;
+  background-color: #ddd;
+} */
+
+nav a:hover {
+  color: rgb(211, 9, 9);
+}
+
+p {
+  /* background-color: #321; */
+  padding: 10px;
+}
+
+footer {
+  background-color: salmon;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+footer nav ul {
+  background-color: #321;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-bg {
+  background-color: #321;
 }
