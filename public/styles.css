@@ -26,6 +26,7 @@ body {
 }
 
 main {
+  padding: 0.5rem;
   min-height: calc(80vh - 100px);
 }
 
